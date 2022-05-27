@@ -25,16 +25,29 @@ button {
     width: 100px;
     height: 50px;
 
-
 }
 
 .buttons {
     display: grid;
-    grid-area: section;
+    margin: 0 auto;
+    padding: 0%;
+    grid-area: top;
+    
 }
 
 
-h1 {
+section {
+    display: grid;
+    grid-template-areas: 
+    "top"
+    "body";
+    grid-template-columns: 100%;
+    grid-template-rows: 110px 1fr;
+}
+
+
+
+header {
     text-align: center;
     font-family: 'Franklin Gothic Medium';
     grid-area: header;
@@ -50,7 +63,14 @@ label {
 
 input {
     border-color: black;
-    grid-area: section;
+}
+
+.inputbox {
+    display:grid;
+    grid-area: top;
+    height: 50px;
+    width: 300px;
+
 }
 
 footer{
