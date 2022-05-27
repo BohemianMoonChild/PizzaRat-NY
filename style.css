@@ -11,6 +11,10 @@ body {
 
 header {
     display: grid;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 40px;
+    grid-area: header;
     
 }
 
@@ -49,11 +53,11 @@ section {
 
 
 
-header {
+/* header {
     text-align: center;
     font-family: 'Franklin Gothic Medium';
     grid-area: header;
-}
+} */
 
 
 label {
@@ -73,7 +77,8 @@ label {
 input {
     border-color: black;
     display: flex;
-    display: grid;
+    grid-row: 2;
+    /* display: grid; */
 
 
 }
