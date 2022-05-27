@@ -11,6 +11,10 @@ body {
 
 header {
     display: grid;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 40px;
+    grid-area: header;
     
 }
 
@@ -21,7 +25,7 @@ button {
     border-radius: 6px;
     border: 1px solid black;
     padding: 10px;
-    margin: 10px;
+    margin: 0 auto;
     width: 100px;
     height: 50px;
 
@@ -32,6 +36,8 @@ button {
     margin: 0 auto;
     padding: 0%;
     grid-area: top;
+    display: flex;
+    flex-flow: nowrap;
     
 }
 
@@ -47,31 +53,59 @@ section {
 
 
 
-header {
+/* header {
     text-align: center;
     font-family: 'Franklin Gothic Medium';
     grid-area: header;
-}
+} */
 
 
 label {
     font-family: 'Franklin Gothic Medium';
     font-size: 20px;
+    margin-right: auto;
     display: grid;
     grid-area: section;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    
+
+    
 }
 
 input {
     border-color: black;
+    display: flex;
+    grid-row: 2;
+    /* display: grid; */
+
+
 }
+
+.complaintsInput {
+display: flex;
+width: 10px;
+
+
+}
+
+
 
 .inputbox {
     display:grid;
     grid-area: top;
     height: 50px;
-    width: 300px;
+    width: 420px;
+    margin: 0 auto;
+    align-content: center;
+    /* display: flex;
+    justify-content: flex-end; */
+    
 
 }
+
+
 
 footer{
     grid-area: footer;
