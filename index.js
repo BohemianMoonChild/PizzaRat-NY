@@ -31,14 +31,19 @@ const getData = (e) => {
                 const div = document.createElement('div')
                 const h4 = document.createElement('h4')
                 const p = document.createElement('p')
+                const resToggleBtn = document.createElement('button')
                 h4.textContent = item.descriptor
-                p.textContent = item.resolution_description
+                resToggleBtn.innerHTML="Police Response"
+
                 h4.appendChild(p)
                 div.appendChild(h4)
                 container.appendChild(div)
+                document.body.appendChild(resToggleBtn);
+
+
             })
         }
-
+console.log(resolution_description);
 
         //* Event Listeners
         manBtn.addEventListener('click', getData)
@@ -46,3 +51,4 @@ const getData = (e) => {
         bkBtn.addEventListener('click', getData)
         qnsBtn.addEventListener('click', getData)
         stIslandBtn.addEventListener('click', getData)
+        resToggleBtn.addEventListener('click', resolution_description)
