@@ -50,18 +50,8 @@ const renderData = (data) => {
 
 
 
-h4.textContent = item.descriptor
-
-resToggleBtn.innerHTML = "Police Resolution"
-
-//appending
-h4.appendChild(p)
-div.appendChild(h4)
-container.appendChild(div)
-document.body.appendChild(resToggleBtn)
-            })
-        }
-
+      
+        
 
 //* Event Listeners
 manBtn.addEventListener('click', getData)
@@ -70,8 +60,4 @@ bkBtn.addEventListener('click', getData)
 qnsBtn.addEventListener('click', getData)
 stIslandBtn.addEventListener('click', getData)
 
-resToggleBtn.addEventListener('click', resolution_description)
 
-button.addEventListener('click', () => {
-    document.textContent.item.resolution_description
-})
