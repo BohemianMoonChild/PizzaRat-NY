@@ -7,6 +7,7 @@ const stIslandBtn = document.getElementById('staten-island')
 
 //* input 
 const input = document.querySelector('input')
+
 //*Container div
 const container = document.getElementById('container')
 
@@ -25,20 +26,31 @@ const getData = (e) => {
             .catch(err => console.error(err))
 }
 
+
+
         //* Data Render Function. Appending data away from first function 
         const renderData = (data) => {
             data.map(item => {
                 const div = document.createElement('div')
                 const h4 = document.createElement('h4')
                 const p = document.createElement('p')
+                const resToggleBtn = document.createElement('button')
+                
+                
+
                 h4.textContent = item.descriptor
-                p.textContent = item.resolution_description
+
+                resToggleBtn.innerHTML = "Police Resolution"
+
+                //appending
                 h4.appendChild(p)
                 div.appendChild(h4)
                 container.appendChild(div)
+                document.body.appendChild(resToggleBtn)
             })
         }
 
+        
 
         //* Event Listeners
         manBtn.addEventListener('click', getData)
@@ -46,3 +58,6 @@ const getData = (e) => {
         bkBtn.addEventListener('click', getData)
         qnsBtn.addEventListener('click', getData)
         stIslandBtn.addEventListener('click', getData)
+        button.addEventListener('click', () => {
+            document.textContent.item.resolution_description 
+        })
