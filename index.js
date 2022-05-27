@@ -12,18 +12,37 @@ const container = document.getElementById('container')
 
 
 //* fetch data from API
-fetch(`https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=${numComplaints}&agency=NYPD&borough=${borough}`)
-.then((response) => {
-    return response.json();
-})
+const getData = (e) => {
+        const numComplaints = input.value || 10
+        const borough = e.target.id.toUpperCase()
+        //fetch
+        fetch(`https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=${numComplaints}&agency=NYPD&borough=${borough}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                renderData(data)
+            })
+            .catch(err => console.error(err))
+}
 
-.then((data) => {
-    let 
-})
+        //* Data Render Function. Appending data away from first function 
+        const renderData = (data) => {
+            data.map(item => {
+                const div = document.createElement('div')
+                const h4 = document.createElement('h4')
+                const p = document.createElement('p')
+                h4.textContent = item.descriptor
+                p.textContent = item.resolution_description
+                h4.appendChild(p)
+                div.appendChild(h4)
+                container.appendChild(div)
+            })
+        }
 
 
-//* Data Render Function. Appending data away from first function 
-
-
-
-//* Event Listeners
+        //* Event Listeners
+        manBtn.addEventListener('click', getData)
+        bxBtn.addEventListener('click', getData)
+        bkBtn.addEventListener('click', getData)
+        qnsBtn.addEventListener('click', getData)
+        stIslandBtn.addEventListener('click', getData)
