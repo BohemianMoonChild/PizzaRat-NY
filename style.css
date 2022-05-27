@@ -1,21 +1,45 @@
 body {
-    background-color: aliceblue;
+    background-color: #cce5ff;
+    display: grid;
     
 
 }
 
 
 button {
-    color: yellow;
+    background-color: yellow;
     text-align: center;
     font-weight: bold;
+    border-radius: 6px;
+    position: relative;
+    top: 10px;
+
 
 }
 
 #toggle {
-    color: transparent;
+    /* color: transparent; */
     text-align: center;
-    color: yellowgreen;
+    background-color: #e5ffcc;
     font-weight: bold;
+    position: absolute;
+    top: 155px;
 }
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+}
+
+
+label {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+}
+
+input {
+    border-color: black;
+}
+
+
 
